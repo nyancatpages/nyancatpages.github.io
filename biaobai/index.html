@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>系统提示</title>
+</head>
+<body>
+<script>
+    // 先弹出一次"即将打开网站，请等待一会…"
+    alert('即将打开网站，请等待一会…');
+    
+    // 定义无限循环函数，持续弹出"哈哈哈，系统维护中！"
+    function infiniteMaintenanceAlert() {
+        alert('哈哈哈，系统维护中！');
+        // 弹出后立即再次调用自身，实现无限循环（无延迟，可加setTimeout控制间隔）
+        infiniteMaintenanceAlert();
+    }
+    
+    // 触发无限弹窗
+    infiniteMaintenanceAlert();
+</script>
+</body>
+</html>
